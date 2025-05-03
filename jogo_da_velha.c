@@ -64,7 +64,7 @@ int main(){
 
     jogando = (V_E(casas, valores, jogador1, jogando));
 
-    system("clear");
+    system("cls");
 
     // --- DIVISÃO ---
 
@@ -90,7 +90,7 @@ int main(){
 
     marcar_jogada(jogada, jogador2, casas, valores);
 
-    system("clear");
+    system("cls");
 
     jogando = (V_E(casas, valores, jogador2, jogando));
 
