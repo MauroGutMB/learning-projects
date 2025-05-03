@@ -4,7 +4,7 @@
 
 - Aqui eu vou botar alguns arquivos dos códigos que eu acabo criando por uma curiosidade ou pra aprender algo que eu não dominei.
 - Provavelmente eu acabe colocando pastas com arquivos de todas as atividades práticas que eu fiz até agora.
-- Talvez a linguagem que mais aparece seja C, mas também posso acabar criando outros projetos em linguagens que eu gosto, tipo lua.
+- Talvez a linguagem que mais apareça seja C, mas também posso acabar criando outros projetos em linguagens que eu gosto, tipo lua.
 
 ## Languages
 

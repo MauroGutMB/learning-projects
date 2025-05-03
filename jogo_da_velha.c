@@ -309,7 +309,7 @@ int V_E(int casas[3][3], char valores[3][3], char jogador, int jogando){
     printf("O ojogo Empatou!!");
     return 0;
     /*
-     * qualquer caso de empate.
+      qualquer caso de empate.
       EX:
       1 0 1
       1 0 1
