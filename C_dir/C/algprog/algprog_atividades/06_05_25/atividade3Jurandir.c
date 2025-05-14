@@ -19,10 +19,8 @@ int main(){
 
     vetorNotas[i] = nota;
 
-    if(Nmaior == 0 && Nmenor == 0){
-      Nmaior = nota;
-      Nmenor = nota;
-    }
+    Nmaior = vetorNotas[0];
+    Nmenor = vetorNotas[0];
 
   }
 
@@ -32,7 +30,7 @@ int main(){
       Imaior = i;
     }
 
-    if(vetorNotas[i] <= Nmenor && vetorNotas[i] != vetorNotas[i - 1]){
+    if(vetorNotas[i] <= Nmenor){
       Nmenor = vetorNotas[i];
       Imenor = i;
     }
