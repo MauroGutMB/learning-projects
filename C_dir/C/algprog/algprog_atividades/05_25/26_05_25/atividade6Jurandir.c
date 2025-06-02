@@ -10,7 +10,7 @@ O número deve ter 4 dígitos.
 int main(){
 
   float valor;
-  float palindromo[4];
+  int palindromo[4];
 
   printf("Insira um valor de 4 digitos --> ");
   scanf("%f", &valor);
@@ -34,7 +34,7 @@ int main(){
 
   printf("A sequência de números ");
   for(int i = 0; i < 4; i++){
-    printf("%.0f", palindromo[i]);
+    printf("%i", palindromo[i]);
   }
 
   int palind_1 = (palindromo[0] == palindromo[3]);

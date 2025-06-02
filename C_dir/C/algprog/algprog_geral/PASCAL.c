@@ -2,22 +2,28 @@
 
 int main(){
 
-  int x = 13;
+  int x;
+
+  printf("X --> ");
+  scanf("%i", &x);
 
   for(int i = 1; i <= x; i++){
 
-    int y = 1; 
+    int num = 1;
 
-    for(int z = 1; z <= x - i; z++){
+    for(int k = 1; k <= x - i; k++){
       printf("  ");
     }
 
     for(int j = 1; j <= x; j++){
+
       if(i >= j){
-        printf("%3i ", y);
-        y = y * (i - j) / j;
+        printf("%3i ", num);
+        num = num * (i - j) / j;
       }
+      
     }
+
     printf("\n");
   }
 

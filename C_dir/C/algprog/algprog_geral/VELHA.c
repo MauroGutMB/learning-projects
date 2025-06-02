@@ -235,7 +235,7 @@ int V_E(int casas[3][3], char valores[3][3], char jogador, int jogando){
     printf("O jogador %i GANHOU!", num);
     return 0;
     /*
-      1 1 1
+      x x x
       0 0 0
       0 0 0
     */
@@ -245,7 +245,7 @@ int V_E(int casas[3][3], char valores[3][3], char jogador, int jogando){
     return 0;
     /*
       0 0 0
-      1 1 1
+      x x x
       0 0 0
     */
   }
@@ -255,52 +255,52 @@ int V_E(int casas[3][3], char valores[3][3], char jogador, int jogando){
     /*
       0 0 0
       0 0 0
-      1 1 1
+      x x x
     */
   }
   if(valores[0][0] == jogador && valores[1][0] == jogador && valores[2][0] == jogador){
     printf("O jogador %i GANHOU!", num);
     return 0;
     /*
-      1 0 0
-      1 0 0
-      1 0 0
+      x 0 0
+      x 0 0
+      x 0 0
     */
   }
   if(valores[0][1] == jogador && valores[1][1] == jogador && valores[2][1] == jogador){
     printf("O jogador %i GANHOU!", num);
     return 0;
     /*
-      0 1 0
-      0 1 0
-      0 1 0
+      0 x 0
+      0 x 0
+      0 x 0
     */
   }
   if(valores[0][2] == jogador && valores[1][2] == jogador && valores[2][2] == jogador){
     printf("O jogador %i GANHOU!", num);
     return 0;
     /*
-      0 0 1
-      0 0 1
-      0 0 1
+      0 0 x
+      0 0 x
+      0 0 x
     */
   }
   if(valores[0][0] == jogador && valores[1][1] == jogador && valores[2][2] == jogador){
     printf("O jogador %i GANHOU!", num);
     return 0;
     /*
-      1 0 0
-      0 1 0
-      0 0 1
+      x 0 0
+      0 x 0
+      0 0 x
     */
   }
   if(valores[2][0] == jogador && valores[1][1] == jogador && valores[0][2] == jogador){
     printf("O jogador %i GANHOU!", num);
     return 0;
     /*
-      0 0 1
-      0 1 0
-      1 0 0
+      0 0 x
+      0 x 0
+      x 0 0
     */
   }
   if(casas[0][0] == 0 && casas[0][1] == 0 && casas[0][2] == 0 &&
@@ -311,9 +311,9 @@ int V_E(int casas[3][3], char valores[3][3], char jogador, int jogando){
     /*
      * qualquer caso de empate.
       EX:
-      1 0 1
-      1 0 1
-      0 1 0
+      x 0 x
+      x 0 x
+      0 x 0
     */
   }
 

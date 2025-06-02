@@ -22,7 +22,7 @@ int main(){
     } 
   }
 
-  printf("\nA soma dos números: %i\nQuantidade de números abaixo do intervalo de 10 a 20: %i", soma, numeros_acima + numeros_abaixo);
+  printf("\nA soma dos números: %i\n", soma);
   printf("\nNúmeros acima de 20: %i", numeros_acima);
   printf("\nNúmeros abaixo de 10: %i", numeros_abaixo);
 
