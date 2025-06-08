@@ -30,6 +30,7 @@ int main(){
                         {' ', ' ', ' '}};
 
   char jogador1 = 'X', jogador2 = 'O'; // Caractere de cada jogador
+  
   int jogando = 1; // Booleano pro jogo rodar
 
   // Loop principal onde ocorre a lógica do jogo 
@@ -98,6 +99,8 @@ int main(){
 
   printf("\n\n");
   mostrar_tabuleiro(casas, valores, tamanho1, tamanho2);
+
+  return 0;
 }
 
 // Função pra validar uma jogada

@@ -13,17 +13,16 @@ int main(){
 
   float valor_compra = 500;
   float desconto_valor = 1;
-  int desconto = 1;
 
   printf("Valor da Compra --- Porcentagem do desconto ---   Valor final\n");
-  while(desconto <= 25){
+
+  while(desconto_valor <= 25){
     float desconto_atual = desconto_valor / 100;
     float valor_atual = valor_compra - (valor_compra * desconto_atual);
 
-    printf(" %10.2fR$   |||    %10i%%          ||| %10.2fR$    \n", valor_compra, desconto, valor_atual);
+    printf(" %10.2fR$   |||    %10.0f%%          ||| %10.2fR$    \n", valor_compra, desconto_valor, valor_atual);
 
     valor_compra += 100;
-    desconto++;
     desconto_valor++;
   }
 

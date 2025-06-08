@@ -57,7 +57,7 @@ int main(){
     pontuar(result, vde);
 
     printf("\nJOGADOR --- ROBÔ");
-    printf("\n%3s <-> %3s\n", escolhas[jogador - 1], escolhas[robo - 1]);
+    printf("\n%7s <-> %s\n", escolhas[jogador - 1], escolhas[robo - 1]);
 
   }
 

@@ -9,13 +9,10 @@ int main(){
 
   int lado;
 
-  printf("Insira o tamanho do lado do quadrado --> ");
-  scanf("%i", &lado);
-
-  if(lado < 1 || lado > 20){
-    printf("Tamanho inválido.");
-    return 1;
-  }
+  do {
+    printf("Insira o tamanho do lado do quadrado --> ");
+    scanf("%i", &lado);
+  } while(lado <= 0 || lado > 20);
 
   for(int i = 1; i <= lado; i++){
     for(int j = 1; j <= lado; j++){

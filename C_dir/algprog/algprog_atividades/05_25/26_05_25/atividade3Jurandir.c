@@ -8,7 +8,7 @@ int main(){
 
   int lado;
 
-  printf("Insira o tamanho do lado do quadrado --> ");
+  printf("Insira o tamanho do lado do triangulo --> ");
   scanf("%i", &lado);
 
   for(int i = 1; i <= lado; i++){
@@ -22,6 +22,7 @@ int main(){
       if(i >= j){
         printf("* ");
       }
+
     }
     printf("\n");
   }
