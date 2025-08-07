@@ -2,7 +2,7 @@
 
 int main(){
 
-  int given_array[] = {1, 2, 4, 9, 14, 12, 3, 5};
+  int given_array[] = {1, 0, 2, 4, 9, 10, 8, 14, 12, 3, 5};
   int size_array = sizeof(given_array) / sizeof(given_array[0]);
 
   int target;
