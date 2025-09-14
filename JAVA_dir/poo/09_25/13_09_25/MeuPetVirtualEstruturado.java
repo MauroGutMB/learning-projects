@@ -44,7 +44,7 @@ public class MeuPetVirtualEstruturado{
       switch (opt) {
         case 1:
           in_game = verif(pet_felicidade - 1, pet_fome - 2, max, min);
-          se_morto(in_game);
+          se_morto(in_game, pet_nome);
           comer(pet_nome);  
           pet_fome -= 2;
           pet_felicidade -= 1;
@@ -52,7 +52,7 @@ public class MeuPetVirtualEstruturado{
 
         case 2:
           in_game = verif(pet_felicidade + 2, pet_fome + 1, max, min);
-          se_morto(in_game);
+          se_morto(in_game, pet_nome);
           brincar(pet_nome);  
           pet_felicidade += 2;
           pet_fome += 1;
@@ -94,9 +94,9 @@ public class MeuPetVirtualEstruturado{
     return true;
   } 
 
-  static void se_morto(boolean morto){
+  static void se_morto(boolean morto, String nome){
     if(!morto == true){
-      System.out.println("O tamagotchi morreu! :(");
+      System.out.println(nome + " morreu! :(");
       System.exit(0);
     }
   }
