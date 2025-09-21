@@ -10,7 +10,7 @@ void mult(int *p){
 
 int main(){
 
-  int x = 15;
+  int x = 775;
   int *px = &x;
 
   printf("Valor de x pré-duplicado => %i\n", *px);

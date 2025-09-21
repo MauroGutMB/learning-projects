@@ -4,18 +4,22 @@
 
 #include <stdio.h>
 
-void alt(int *p){
-  *p = 15;
+void alt(int *p1, int *p2){
+  int temp = *p1;
+  *p1 = *p2;
+  *p2 = temp;
 }
 
 int main(){
 
   int x = 20;
-  printf("%i\n", x);
+  int y = 30;
 
-  alt(&x);
+  printf("%i, %i\n", x, y);
 
-  printf("%i", x);
+  alt(&x, &y);
+
+  printf("%i, %i", x, y);
 
   return 0;
 }

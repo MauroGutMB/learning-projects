@@ -9,9 +9,9 @@
 
 void informacoes(int *p){
 
-  printf("%p\n", &*p);
-  printf("%p\n", &p);
   printf("%i\n", *p);
+  printf("%p\n", &p);
+  printf("%p\n", p);
 
 }
 
