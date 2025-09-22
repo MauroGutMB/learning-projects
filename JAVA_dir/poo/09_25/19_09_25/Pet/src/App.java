@@ -3,7 +3,15 @@
  */
 public class App {
 
-  Pet meuPet = new Pet("", 5, 5);
+  Pet meuPet = new Pet("", 5, 5); // nome, felicidade, fome
+
+  Alimento alimento1 = new Alimento("Chocolate", 1, 0); // nome do alimento, valor nutricional, gosto ruim
+  Alimento alimento2 = new Alimento("Fruta", 2, 3);
+  Alimento alimento3 = new Alimento("Carne", 5, 0);
+  Alimento alimento4 = new Alimento("Ameixa", 2, 2);
+
+  Alimento[] alimentos = {alimento1, alimento2, alimento3, alimento4};
+
   boolean inGame = true;
 
   public void main(String[] args) {
@@ -29,7 +37,19 @@ public class App {
 
       switch(opt){
         case "1" : limpar(); meuPet.brincar(); IO.readln(); break;
-        case "2" : limpar(); meuPet.alimentar(); IO.readln();  break;
+
+        case "2" : limpar(); 
+
+                   Alimento comida = meuPet.telaEscolherAlimento(alimentos);
+                   while (comida == null) {
+                      comida = meuPet.telaEscolherAlimento(alimentos);
+                   }
+
+                   meuPet.alimentar(comida);
+
+                   IO.readln();
+                   break;
+
         case "3" : limpar(); meuPet.showStatus(); IO.readln(); break;
         case "4" : limpar(); inGame = false;
       }

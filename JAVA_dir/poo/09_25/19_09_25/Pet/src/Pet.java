@@ -27,12 +27,12 @@ public class Pet {
     System.out.printf("+----------------------------+\n");
   }
 
-  public void alimentar(){
-    this.felicidade = Math.max(0, this.felicidade - 1);
-    this.fome = Math.max(0, this.fome - 2);
+  public void alimentar(Alimento alimento){
+    this.felicidade = Math.max(0, this.felicidade - alimento.nivelSaboroso);
+    this.fome = Math.max(0, this.fome - alimento.valorNutricional);
     System.out.printf("+----------------------------+\n");
     System.out.printf("|    O pet foi Alimentado!   |\n");
-    System.out.printf("|     -2 Fome  -1 Feli.      |\n");
+    System.out.printf("|     -%d Fome  -%d Feli.      |\n", alimento.valorNutricional, alimento.nivelSaboroso);
     System.out.printf("+----------------------------+\n");
   }
 
@@ -42,9 +42,50 @@ public class Pet {
     System.out.printf("+----------------------------+\n");
     System.out.printf("| TAMAGOTCHI  %10s     |\n", this.nome);
     System.out.printf("+----------------------------+\n");
-    System.out.printf("|       Fome: %3d            |\n", this.fome);
-    System.out.printf("|       Fel.: %3d            |\n", this.felicidade);
+    System.out.printf("|       Fome: %2d            |\n", this.fome);
+    System.out.printf("|       Fel.: %2d            |\n", this.felicidade);
     System.out.printf("+----------------------------+\n");
+  }
+
+  // ------------- Escholher um alimento ------------- //
+
+  Alimento telaEscolherAlimento(Alimento[] alimentos){
+
+    System.out.printf("+----------------------------+\n");
+    for(int i = 0; i < alimentos.length; i++){
+      System.out.printf("|  %3d.  %10s          |\n", i+1, alimentos[i].nome);
+    }
+    System.out.printf("+----------------------------+\n");
+
+    String opt = "0";
+
+    System.out.print("\n-> ");
+    opt = IO.readln();
+    int optInt = 0;
+
+    try {
+      optInt = Integer.parseInt(opt);
+    } catch (Exception e) {
+      new App().limpar();
+      System.out.printf("+----------------------------+\n");
+      System.out.printf("| Insira uma comida válida   |\n", this.fome);
+      System.out.printf("+----------------------------+\n");
+
+
+      return null;
+    }
+
+    try {
+      return alimentos[optInt - 1];
+    } catch (Exception e) {
+      new App().limpar();
+      System.out.printf("+----------------------------+\n");
+      System.out.printf("| Insira uma comida válida   |\n", this.fome);
+      System.out.printf("+----------------------------+\n");
+    }
+
+    return null;
+
   }
   
 }
