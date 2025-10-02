@@ -51,7 +51,7 @@ public class Alimento {
     System.out.println("+---------------------------------+");
     for(int i = 0; i < size; i++){
       Alimento x = alimentos.get(i);
-    System.out.printf("    %d.  %10s  %.2f \n", i+1, x.getNome(), x.getPreco());
+    System.out.printf("    %d.  %10s  %.2fR$ \n", i+1, x.getNome(), x.getPreco());
     }
     System.out.println("+---------------------------------+");
   }
