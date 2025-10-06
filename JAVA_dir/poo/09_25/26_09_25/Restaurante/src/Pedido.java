@@ -7,13 +7,15 @@ import java.util.ArrayList;
 public class Pedido {
 
   private int numeroPedido;
+  private int numeroMesa;
   private ArrayList<Alimento> pedidos;
   private double precoTotal;
 
   Pedido(){}
 
-  Pedido(int nPedido, ArrayList<Alimento> als, double pTotal){
+  Pedido(int nPedido, int nMesa, ArrayList<Alimento> als, double pTotal){
     this.numeroPedido = nPedido;
+    this.numeroMesa = nMesa;
     this.pedidos = als;
     this.precoTotal = pTotal;
   }
@@ -30,16 +32,24 @@ public class Pedido {
     return pedidos;
   }
 
-  public void setPedidos(ArrayList<Alimento> pedidos) {
-    this.pedidos = pedidos;
+  public void AddPedidos(Alimento al) {
+    this.pedidos.add(al);
   }
 
-  public double getPrecoTotal() {
-    return precoTotal;
+  public int getNumeroMesa() {
+    return numeroMesa;
   }
 
-  public void setPrecoTotal(double precoTotal) {
-    this.precoTotal = precoTotal;
+  public void setNumeroMesa(int numeroMesa) {
+    this.numeroMesa = numeroMesa;
+  }
+
+  public double getPrecoTotal(ArrayList<Alimento> pedidos){
+    double total = 0.0;
+    for(Alimento x : pedidos){
+      total += x.getPreco();
+    }
+    return total;
   }
 
   // ----------------------------//
@@ -57,6 +67,8 @@ public class Pedido {
       Alimento x = cardapio.get(i);
       System.out.println(x.getDescricao());
     }
+
+    //#TODO
 
     return null;
   }
