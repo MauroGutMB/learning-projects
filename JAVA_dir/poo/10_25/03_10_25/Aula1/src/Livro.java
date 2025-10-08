@@ -69,9 +69,20 @@ public class Livro {
   public void setCategoria(Categoria categoria) {
     this.categoria = categoria;
   }
-  public Categoria getCategoria() {
-    return categoria;
+  public String getCategoria() {
+    return categoria.getNome();
   }
   
 
+  public void livroDados(){
+    System.out.printf("+----------------------------------+\n");
+    System.out.printf("|           DADOS DO LIVRO         |\n");
+    System.out.printf("+----------------------------------+\n");
+    System.out.printf("  Titulo:     %s          \n", this.getTitulo());
+    System.out.printf("  Autor:      %s          \n", this.getAutor());
+    System.out.printf("  Codigo:     %s          \n", this.getCodigo());
+    System.out.printf("  Estoque:    %d          \n", this.getEstoque());
+    System.out.printf("  Categoria:  %s          \n", this.getCategoria());
+    System.out.printf("  Data:       %s          \n", this.getData());
+  }
 }
