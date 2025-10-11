@@ -2,8 +2,6 @@ import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Cliente
- *
- * Será preciso cadastrar os Clientes (alunos, professores ou externos) com seus dados principais: código, nome, email, telefone e endereço.
  */
 public class Cliente {
 
