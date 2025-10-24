@@ -1,0 +1,4 @@
+### arquivos .o, .class, e sem extensão ###
+*.o
+*.obj
+*.class
