@@ -2,3 +2,6 @@
 *.o
 *.obj
 *.class
+
+## arquivos sem extensão
+*.
