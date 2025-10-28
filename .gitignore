@@ -1,8 +1,8 @@
 ### arquivos .o, .class, e sem extensão ###
-*.o
-*.obj
-*.class
-
 *
 !*/
 !*.*
+
+*.o
+*.obj
+*.class
