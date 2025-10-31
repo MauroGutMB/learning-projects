@@ -30,6 +30,7 @@ int main() {
     root = insert(root, 40);
     root = insert(root, 60);
     root = insert(root, 80);
+    root = insert(root, 90);
 
     /*
      A árvore resultante será:
