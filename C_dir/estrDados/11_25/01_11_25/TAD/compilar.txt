@@ -1,0 +1,7 @@
+1. compilar arquivos .o:
+  gcc -c circulo.c ponto.c
+
+2. compilar arquivos para a main
+  gcc main.c circulo.o ponto.o -o main -lm
+
+OBS: -lm para math.h
