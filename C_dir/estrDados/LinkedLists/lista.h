@@ -1,0 +1,11 @@
+typedef struct LinkedList LinkedList;
+LinkedList *criarNode(int valor);
+LinkedList* pushNode(int valor, LinkedList* node);
+LinkedList* popNode(LinkedList* lista);
+void limparLista(LinkedList *lista);
+void showLinkedList(LinkedList *lista);
+int comprimento(LinkedList* l);
+int maiores(LinkedList* l, int n);
+LinkedList* separa(LinkedList* l, int n);
+LinkedList* ultimo(LinkedList* l);
+LinkedList* concatena (LinkedList* l1, LinkedList* l2);
