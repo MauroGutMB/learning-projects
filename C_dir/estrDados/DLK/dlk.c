@@ -67,3 +67,33 @@ void imprimir_reverso_dlk(dlk* l){
   }
   printf("%i", tdlk->valor);
 }
+
+dlk* dlk_remover(dlk* l, int v){
+  dlk* tl = l;
+  while(tl->valor != v){
+    if(tl->proximo == NULL && tl->valor != v){
+      printf("Valor não encontrado.\n");
+      return l;
+    }
+    tl = tl->proximo;
+  }
+
+
+  if(tl->anterior == NULL){
+    tl->proximo->anterior = NULL;
+    dlk* tdlk = tl->proximo;
+    free(tl);
+    return tdlk;
+  }
+  if(tl->proximo == NULL){
+    tl->anterior->proximo = NULL;
+    free(tl);
+    return l;
+  }
+
+  tl->anterior->proximo = tl->proximo;
+  tl->proximo->anterior = tl->anterior;
+  free(tl);
+
+  return l;
+}

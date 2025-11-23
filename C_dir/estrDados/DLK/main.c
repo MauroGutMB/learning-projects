@@ -8,10 +8,13 @@ int main(){
 
   p = inserir_no(p, 10);
   p = inserir_no(p, 15);
+  p = inserir_no(p, 20);
+
 
   imprimir_dlk(p);
   printf("\n");
-  imprimir_reverso_dlk(p);
+  p = dlk_remover(p, 20);
+  imprimir_dlk(p);
 
   dlk_liberar(p);
 
